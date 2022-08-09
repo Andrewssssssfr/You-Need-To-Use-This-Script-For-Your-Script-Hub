@@ -1,0 +1,19 @@
+if game.Players.LocalPlayer.Character:FindFirstChild("5secondsTimeOut") then
+	local Notif = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+	Notif:MakeNotification({
+		Name = "Hold on a second!",
+		Content = "Script cannot be executed every 5 seconds!",
+		Image = "rbxassetid://4483345998",
+		Time = 3.5
+	})
+else
+	-- loadstring here
+	print("loadstring loaded!")
+end
+
+local val = Instance.new("IntValue")
+val.Name = "5secondsTimeOut"
+val.Parent = game.Players.LocalPlayer.Character
+wait(5)
+
+val:Destroy()
